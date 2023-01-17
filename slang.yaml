@@ -1,0 +1,18 @@
+base_local: en
+fallback_strategy: base_locale
+namespaces: true
+locale_handling: false
+flat_map: false
+flutter_integration: false
+translation_class_visibility: private
+output_directory: lib/src/i18n
+output_format: multiple_files
+maps:
+  - standard
+  - thompson
+  - osis
+  - paratext
+  - chapters
+  - alternative
+  - books
+  - numbers
