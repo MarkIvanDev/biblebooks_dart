@@ -1,6 +1,6 @@
 name: biblebooks
 description: A Dart library to get info about bible books.
-version: 1.0.0
+version: 1.1.0
 repository: https://github.com/MarkIvanDev/biblebooks_dart.git
 issue_tracker: https://github.com/MarkIvanDev/biblebooks_dart/issues
 
@@ -9,6 +9,7 @@ environment:
 
 dependencies:
   slang: ^4.7.2
+  intl: ^0.20.2
 
 dev_dependencies:
   lints: ^5.1.1
