@@ -17,10 +17,14 @@
   "nehemiah": [],
   "esther": [],
   "job": [],
-  "psalms": ["Psalm"],
+  "psalms": [
+    "Psalm"
+  ],
   "proverbs": [],
   "ecclesiastes": [],
-  "songOfSongs": ["Song of Solomon"],
+  "songOfSongs": [
+    "Song of Solomon"
+  ],
   "isaiah": [],
   "jeremiah": [],
   "lamentations": [],

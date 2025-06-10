@@ -1,6 +1,7 @@
 base_local: en
 fallback_strategy: base_locale
 namespaces: true
+lazy: false
 locale_handling: false
 flat_map: false
 flutter_integration: false

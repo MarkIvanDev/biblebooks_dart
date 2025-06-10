@@ -10,14 +10,14 @@ class BibleBooksHelper {
   /// Returns the localized names of all the books of the bible.
   Iterable<MapEntry<BibleBook, String>> allNames(
       {AppLocale locale = AppLocale.en}) sync* {
-    final books = locale.build().books;
+    final books = locale.buildSync().books;
     yield* BibleBook.values.map((e) => MapEntry(e, books[e.name] ?? ''));
   }
 
   /// Returns the alternative names of all the books of the bible.
   Iterable<MapEntry<BibleBook, List<String>>> allAlternativeNames(
       {AppLocale locale = AppLocale.en}) sync* {
-    final alternative = locale.build().alternative;
+    final alternative = locale.buildSync().alternative;
     yield* BibleBook.values
         .map((e) => MapEntry(e, alternative[e.name] ?? const []));
   }
@@ -25,52 +25,52 @@ class BibleBooksHelper {
   /// Returns the OSIS codes of all the books of the bible.
   Iterable<MapEntry<BibleBook, String>> allOsisCodes(
       {AppLocale locale = AppLocale.en}) sync* {
-    final osis = locale.build().osis;
+    final osis = locale.buildSync().osis;
     yield* BibleBook.values.map((e) => MapEntry(e, osis[e.name] ?? ''));
   }
 
   /// Returns the Paratext codes of all the books of the bible.
   Iterable<MapEntry<BibleBook, String>> allParatextCodes(
       {AppLocale locale = AppLocale.en}) sync* {
-    final paratext = locale.build().paratext;
+    final paratext = locale.buildSync().paratext;
     yield* BibleBook.values.map((e) => MapEntry(e, paratext[e.name] ?? ''));
   }
 
   /// Returns the Standard abbreviations of all the books of the bible.
   Iterable<MapEntry<BibleBook, String>> allStandardAbbreviations(
       {AppLocale locale = AppLocale.en}) sync* {
-    final standard = locale.build().standard;
+    final standard = locale.buildSync().standard;
     yield* BibleBook.values.map((e) => MapEntry(e, standard[e.name] ?? ''));
   }
 
   /// Returns the Thompson abbreviations of all the books of the bible.
   Iterable<MapEntry<BibleBook, String>> allThompsonAbbreviations(
       {AppLocale locale = AppLocale.en}) sync* {
-    final thompson = locale.build().thompson;
+    final thompson = locale.buildSync().thompson;
     yield* BibleBook.values.map((e) => MapEntry(e, thompson[e.name] ?? ''));
   }
 
   /// Returns the max chapters of all the books of the bible.
   Iterable<MapEntry<BibleBook, int>> allMaxChapters(
       {AppLocale locale = AppLocale.en}) sync* {
-    final chapters = locale.build().chapters;
+    final chapters = locale.buildSync().chapters;
     yield* BibleBook.values
         .map((e) => MapEntry(e, int.tryParse(chapters[e.name] ?? '') ?? 0));
   }
 
   /// Returns the max chapter of a book.
   int? getMaxChapter(BibleBook book) {
-    return int.tryParse(AppLocale.en.build().chapters[book.name] ?? '');
+    return int.tryParse(AppLocale.en.buildSync().chapters[book.name] ?? '');
   }
 
   /// Returns the localized text of a number.
   String? getNumber(Number number, {AppLocale locale = AppLocale.en}) {
-    return locale.build().numbers[number.name];
+    return locale.buildSync().numbers[number.name];
   }
 
   /// Returns the localized name of a book.
   String? getName(BibleBook book, {AppLocale locale = AppLocale.en}) {
-    return locale.build().books[book.name];
+    return locale.buildSync().books[book.name];
   }
 
   /// Returns the [BibleBook] for a given localized name.
@@ -86,7 +86,7 @@ class BibleBooksHelper {
   /// Returns the alternative name of a book.
   List<String> getAlternativeNames(BibleBook book,
       {AppLocale locale = AppLocale.en}) {
-    return locale.build().alternative[book.name] ?? const <String>[];
+    return locale.buildSync().alternative[book.name] ?? const <String>[];
   }
 
   /// Returns the [BibleBook] for a given alternative name.
@@ -103,7 +103,7 @@ class BibleBooksHelper {
 
   /// Returns the OSIS code of a book.
   String? getOsisCode(BibleBook book, {AppLocale locale = AppLocale.en}) {
-    return locale.build().osis[book.name];
+    return locale.buildSync().osis[book.name];
   }
 
   /// Returns the [BibleBook] for a given OSIS code.
@@ -118,7 +118,7 @@ class BibleBooksHelper {
 
   /// Returns the Paratext code of a book.
   String? getParatextCode(BibleBook book, {AppLocale locale = AppLocale.en}) {
-    return locale.build().paratext[book.name];
+    return locale.buildSync().paratext[book.name];
   }
 
   /// Returns the [BibleBook] for a given Paratext code.
@@ -135,7 +135,7 @@ class BibleBooksHelper {
   /// Returns the Standard abbreviation of a book.
   String? getStandardAbbreviation(BibleBook book,
       {AppLocale locale = AppLocale.en}) {
-    return locale.build().standard[book.name];
+    return locale.buildSync().standard[book.name];
   }
 
   /// Returns the [BibleBook] for a given Standard abbreviation.
@@ -152,7 +152,7 @@ class BibleBooksHelper {
   /// Returns the Thompson abbreviation of a book.
   String? getThompsonAbbreviation(BibleBook book,
       {AppLocale locale = AppLocale.en}) {
-    return locale.build().thompson[book.name];
+    return locale.buildSync().thompson[book.name];
   }
 
   /// Returns the [BibleBook] for a given Thompson abbreviation.
